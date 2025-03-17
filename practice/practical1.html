@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function square(){
+            document.getElementById('square').style.height = '100px';
+            document.getElementById('square').style.width = '100px';
+            document.getElementById('square').style.backgroundColor = 'red';
+        }
+
+        function sircul(){
+            document.getElementById('sircul').style.height = '100px';
+            document.getElementById('sircul').style.width = '100px';
+            document.getElementById('sircul').style.background = 'blue';
+            document.getElementById('sircul').style.borderRadius = '50%';
+        }
+
+        function rectangle(){
+            document.getElementById('rectangle').style.height = '100px';
+            document.getElementById('rectangle').style.width = '400px';
+            document.getElementById('rectangle').style.background = 'brown';
+            
+        }
+
+        function block(){
+            document.getElementById('rectangle').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div id="square"></div>
+    <div id="sircul"></div>
+    <div id="rectangle"></div>
+
+    <button type="button" onclick="square()">SQUARE</button>
+    <button type="button" onclick="sircul()">CIRCLE</button>
+    <button type="button" onclick="rectangle()" ondblclick="block()">RECTANGLE</button>
+</body>
+</html>
