@@ -1,43 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shape Toggle</title>
+    <style>
+        .shape {
+            display: none; /* Initially hidden */
+            margin: 10px;
+        }
+    </style>
     <script>
-        function square(){
-            document.getElementById('square').style.height = '100px';
-            document.getElementById('square').style.width = '100px';
-            document.getElementById('square').style.backgroundColor = 'red';
+        function toggleSquare() {
+            let square = document.getElementById('square');
+            if (square.style.display === 'none' || square.style.display === '') {
+                square.style.display = 'block';
+                square.style.height = '100px';
+                square.style.width = '100px';
+                square.style.backgroundColor = 'red';
+            } else {
+                square.style.display = 'none';
+            }
         }
 
-        function sircul(){
-            document.getElementById('sircul').style.height = '100px';
-            document.getElementById('sircul').style.width = '100px';
-            document.getElementById('sircul').style.background = 'blue';
-            document.getElementById('sircul').style.borderRadius = '50%';
+        function toggleCircle() {
+            let circle = document.getElementById('circle');
+            if (circle.style.display === 'none' || circle.style.display === '') {
+                circle.style.display = 'block';
+                circle.style.height = '100px';
+                circle.style.width = '100px';
+                circle.style.backgroundColor = 'blue';
+                circle.style.borderRadius = '50%';
+            } else {
+                circle.style.display = 'none';
+            }
         }
 
-        function rectangle(){
-            document.getElementById('rectangle').style.height = '100px';
-            document.getElementById('rectangle').style.width = '400px';
-            document.getElementById('rectangle').style.background = 'brown';
-            
-        }
-
-        function block(){
-            document.getElementById('rectangle').style.display = 'none';
+        function toggleRectangle() {
+            let rectangle = document.getElementById('rectangle');
+            if (rectangle.style.display === 'none' || rectangle.style.display === '') {
+                rectangle.style.display = 'block';
+                rectangle.style.height = '100px';
+                rectangle.style.width = '400px';
+                rectangle.style.backgroundColor = 'brown';
+            } else {
+                rectangle.style.display = 'none';
+            }
         }
     </script>
 </head>
 <body>
-    <div id="square"></div>
-    <div id="sircul"></div>
-    <div id="rectangle"></div>
 
-    <button type="button" onclick="square()">SQUARE</button>
-    <button type="button" onclick="sircul()">CIRCLE</button>
-    <button type="button" onclick="rectangle()" ondblclick="block()">RECTANGLE</button>
+    <div id="square" class="shape"></div>
+    <div id="circle" class="shape"></div>
+    <div id="rectangle" class="shape"></div>
+
+    <button type="button" onclick="toggleSquare()">SQUARE</button>
+    <button type="button" onclick="toggleCircle()">CIRCLE</button>
+    <button type="button" onclick="toggleRectangle()">RECTANGLE</button>
+
 </body>
 </html>
