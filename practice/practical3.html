@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Converter</title>
+</head>
+<body>
+
+    <h2>Enter Hours:</h2>
+    <input type="number" id="hoursInput" oninput="convertTime()">
+    
+    <h3>Minutes: <span id="minutes">0</span></h3>
+    <h3>Seconds: <span id="seconds">0</span></h3>
+
+    <script>
+        function convertTime() {
+            let hours = document.getElementById("hoursInput").value;
+            let minutes = hours * 60;
+            let seconds = hours * 3600;
+            
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }
+    </script>
+
+</body>
+</html>
