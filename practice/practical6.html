@@ -64,9 +64,11 @@
     </div>
 
     <script>
-        // Show popup when page loads
+        // Show popup 2 seconds after page loads
         window.onload = function() {
-            document.getElementById("popup").style.display = "flex";
+            setTimeout(function() {
+                document.getElementById("popup").style.display = "flex";
+            }, 2000); // 2000 milliseconds = 2 seconds
         }
         
         // Close popup function
